@@ -17,6 +17,7 @@ namespace Routing.Navigation
         public IObservable<IPageViewModel> PagePopped => this.pagePopped;
 
         public NavigationView(IScheduler backgroundScheduler, IScheduler mainScheduler, IViewLocator viewLocator)
+            : base(new Page())
         {
             //Ensure.ArgumentNotNull(backgroundScheduler, nameof(backgroundScheduler));
             //Ensure.ArgumentNotNull(mainScheduler, nameof(mainScheduler));

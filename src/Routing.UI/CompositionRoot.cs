@@ -1,5 +1,6 @@
 ﻿using ReactiveUI;
 using Routing.Navigation;
+using Splat;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,6 +40,6 @@ namespace Routing.UI
 
         private IScheduler CreateMainScheduler() => new SynchronizationContextScheduler(SynchronizationContext.Current);
 
-        private IViewLocator CreateViewLocator() => ViewLocator.Current;
+        private IViewLocator CreateViewLocator() => Locator.Current.GetService<IViewLocator>();
     }
 }
