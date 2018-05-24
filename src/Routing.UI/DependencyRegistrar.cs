@@ -35,10 +35,13 @@ namespace Routing.UI
 
         private void RegisterServices(IMutableDependencyResolver dependencyResolver, CompositionRoot compositionRoot)
         {
+            dependencyResolver.RegisterLazySingleton(() => compositionRoot.ViewStackService, typeof(IViewStackService));
         }
 
         private void RegisterViews(IMutableDependencyResolver dependencyResolver)
         {
+            dependencyResolver.InitializeSplat();
+            dependencyResolver.InitializeReactiveUI();
             dependencyResolver.Register(CreateView<LoginPage>, typeof(IViewFor<LoginViewModel>));
         }
     }

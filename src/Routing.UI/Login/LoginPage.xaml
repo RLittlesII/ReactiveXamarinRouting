@@ -6,7 +6,7 @@
              x:Class="Routing.UI.Login.LoginPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="Welcome to Login!"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
